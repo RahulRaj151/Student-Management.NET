@@ -1,101 +1,68 @@
-# Full stack crud application in .NET 9 and React 19
+# Student Management System with .NET and React
 
-It is a source code of my [youtube tutorial](https://youtu.be/qcczkv-Hz5c?si=yMJE-_oWz8Ymlx3G) on the same topic.
+This project is a full-stack Student Management System built with .NET 9 for the backend and React 19 for the frontend. It allows users to manage student records with a simple and modern interface.
 
-## Tech stack
+## Features
 
-- .NET 9 Web APIs (Backend)
-- Entity framework core (ORM)
-- Sqlite (database)
-- React 19 (frontend)
-- Lucide react (icons)
-- React router (routing)
-- React hook form (form and validation)
-- React hot toast (toaster)
+- Add new students
+- View a list of all students
+- Update existing student details
+- Delete student records
+- Clean and responsive UI for easy management
 
-## How to run the project
+## Tech Stack
 
-1. Clone the project
+- Backend: .NET 9 Web API
+- ORM: Entity Framework Core
+- Database: SQLite
+- Frontend: React 19
+- Routing: React Router
+- Forms and validation: React Hook Form
+- Notifications: React Hot Toast
+
+## Project Structure
+
+- Backend: ASP.NET Core API with EF Core and SQLite
+- Frontend: Vite + React application for the user interface
+
+## Getting Started
+
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/rd003/DotnetReactCrud
+git clone https://github.com/RahulRaj151/Student-Management.NET.git
+cd Student-Management.NET
 ```
 
-2. Change directory
+### 2. Run the backend
 
 ```bash
-cd DotnetReactCrud
-```
-
-3. Visit backend project's directory
-
-```bash
-cd Backend/Backend/
-```
-
-4. Run migrations
-
-```bash
+cd Backend/Backend
  dotnet ef database update
-```
-
-5. Run backend project
-
-```bash
  dotnet run
 ```
-Keep backend project running. Open a new tab in terminal
 
+Keep the backend running, then open a new terminal window.
 
-6. Visit frontend project's directory
-
-```bash
-cd path-to-project-directory/
-
-cd client
-
-```
-
-7. Install dependencies
+### 3. Run the frontend
 
 ```bash
-npm i
-```
-
-8. Run project
-   
-```bash
-npm run dev
-```
-9. Visit to the route `http://localhost:5173` in the browser.
-
-**Note:** If you are running this project on linux, then you might get this error. I got this on linux mint however it was running fine in windows 11 machine. 
-
-```bash
-Error: Cannot find module @rollup/rollup-linux-x64-gnu. npm has a bug related to optional dependencies (https://github.com/npm/cli/issues/4828). Please try npm i again after removing both package-lock.json and node_modules directory.
-```
-
-I resolved it with these steps:
-
-1. Delete the problematic files:
-
-```bash
-rm -rf node_modules
-rm package-lock.json
-```
-
-2. Install dependencies again
- 
-```bash
-npm i
-```
-
-3. Run project again wiht
-
-```
+cd ../../client
+npm install
 npm run dev
 ```
 
-## screenshot
+Open your browser and visit:
 
-![sreenshot](./screenshot.png)
+```text
+http://localhost:5173
+```
+
+## Notes
+
+If you encounter an npm dependency issue on Linux, you may need to remove the installed modules and lockfile and reinstall them:
+
+```bash
+rm -rf node_modules package-lock.json
+npm install
+```
